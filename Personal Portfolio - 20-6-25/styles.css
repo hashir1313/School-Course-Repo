@@ -1,0 +1,123 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #dfcea1;
+}
+.navbar{
+    background-color: rgb(240, 217, 153);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    position:fixed;
+}
+.footer{
+    background-color: rgba(240, 217, 153, 0.432);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.logo-container{
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 25px;
+    font-weight:bold;
+    max-width: fit-content;
+    gap: 10px;
+}
+.divider{
+    width: 20px;
+}
+#logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    padding-right: 70px;
+    gap: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: rgba(0, 0, 0, 0.616);
+}
+.main{
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 2500px;
+}
+.cards{
+    background-color: #ecd8a0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+.cards:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+.intro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    justify-content: space-around;
+}
+.name, .project-intro{
+    font-size: 50px;
+}
+.skills, .bio, .project-details{
+    font-size: 25px;
+}
+.skills{
+    background-color: rgba(128, 128, 128, 0.226);
+    border-radius: 8px;
+    padding: 5px;
+}
+.projects-container{
+    padding-top: 50px;
+    justify-content: space-around;
+    height: 1800px;
+}
+#projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project-intro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    justify-content: space-around;
+}
+.outro{
+    font-size: 20px;
+}
