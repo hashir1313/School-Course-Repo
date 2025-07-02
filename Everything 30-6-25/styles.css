@@ -1,0 +1,301 @@
+:root{
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --btn-hover-color: rgba(179, 179, 179, 0.253);
+    --html-sec-color: #e67e22;
+    --html-code-background-color: rgb(208 121 44);
+    --css-sec-color: #2980b9;
+    --css-code-background-color: #6ab2e25b; 
+    --accent-color: #e74c3c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+header{
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: fixed;
+    width: 100vw;
+    z-index: 50;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.39);
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.logo-container img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.logo-container span{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-weight: 450;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+section{
+    height: 100vh;
+    overflow: hidden;
+}
+
+#hero{
+    background-color: var(--secondary-color);
+    height: 100vh;
+    padding: 100px;
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:20px;
+    height: 90%;
+    width: 70%;
+}
+
+.hero-text h1{
+    font-size: 50px;
+
+}
+
+.hero-text h1 span{
+    color: var(--accent-color);
+}
+
+.hero-text p{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.hero-text a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 550;
+    text-align: center;
+    background-color: var(--primary-color);
+    display: inline-block;
+    width: 25vw;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 0px;
+    color: var(--secondary-color);
+}
+
+.hero-text a:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-5px) scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-logos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+
+.hero-logos img{
+    width: 20vw;
+    height: 20vh;
+}
+
+.html-logo{
+    rotate: -25deg;
+}
+
+.html-logo:hover{
+    transform: rotate(25deg) scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.css-logo{
+    rotate: 25deg;
+}
+
+.css-logo:hover{
+    transform: rotate(-25deg) scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.html-code-container{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    background-color: var(--html-code-background-color);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.css-code-container{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    background-color: var(--css-code-background-color);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.code-wrapper pre code{
+    background-color: rgba(0, 0, 0, 0);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: start;
+    height: fit-content;
+    margin-left: 10px;
+}
+
+.code-wrapper button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.code-wrapper button:hover{
+    cursor: pointer;
+    background-color: var(--btn-hover-color);
+    transform:scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.code-wrapper button img{
+    width: 20px;
+    height: 20px;
+}
+
+.output{
+    width: 100%;
+}
+
+section#html{
+    background-color: var(--html-sec-color);
+    height: 100vh;
+    padding: 100px;
+}
+
+section#css{
+    background-color: var(--css-sec-color);
+    height: 100vh;
+    padding: 100px;
+}
+
+.html, .css{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+    height: 100%;
+    color: black;
+}
+
+.html-text, .css-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.html-text h2, .css-text h2{
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+.html-text h3, .css-text h3{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.html-text h2 span{
+    color: var(--css-sec-color);
+}
+
+.css-text h2 span{
+    color: var(--html-code-background-color);
+}
+
+.html-text p, .output p, .css-text p, .css-text ol li{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.css-text ol {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-left: 50px;
+    gap: 50px;
+}

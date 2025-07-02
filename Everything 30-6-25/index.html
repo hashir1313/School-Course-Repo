@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything That I Know</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./assets/logo.png" alt="Logo">
+            <span>Muhammad Hashir</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#css">CSS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>Here is what I know about <span>HTML</span> and <span>CSS</span>.</h1>
+                    <p>This webpage contains everything that I know about HTML and CSS. From the basics to advanced concepts. I am sure you will learn something wether you are a beginner or an expert.</p>
+                    <a href="#html">Get Started</a>
+                </div>
+                <div class="hero-logos">
+                    <img class="html-logo" src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML Logo">
+                    <img class="css-logo" src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS Logo">
+                </div>
+            </div>
+        </section>
+        <section class="html-1" id="html">
+            <div class="html">
+                <div class="html-text">
+                    <h2>Starting with <span>HTML!</span></h2>
+                    <p>HTML stands for Hyper Text Markup Language. It is used to give basic structure to a website. It is like the body of a car.</p>
+                    <h3>1. HTML Boilerplate</h3>
+                    <p>First things first, let's start with the basic structure boiler plate of HTML. You can get this boiler plate code by typing ! in the first line and then pressing the enter button in VS Code. Here is the boilerplate code:</p>
+                </div>
+                <div class="html-code-container code-wrapper">
+                    <pre id="code-block">
+<code class=" language-html">&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+&lthead&gt
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta name="vi    gtcontent="width=device initial-scale=1.0">
+    &lttitle>Document&lt/title&gt
+&lt/head&gt
+&ltbody&gt
+                                
+&lt/body&gt
+&lt/html&gt</code>
+</pre>
+                    <button title="Copy Code!" onclick="copyCode()" class="copy-btn"><img src="./assets/copy.svg" alt="Copy icon"></button>
+                </div>
+            </div>
+        </section>
+        <section class="html-2" id="html">
+            <div class="html">
+                <div class="html-text">
+                    <h3>2. Heading Tags</h3>
+                    <p>The heading tag is used to display Headings on a webpage. There are 6 heading tags from &lt;h1&gt to &lt;h6&gt. Here is an example code:</p>
+                </div>
+                <div class="html-code-container code-wrapper">
+                    <pre id="code-block">
+<code class=" language-html">&lth1&gtThis is Heading 1&lt/h1&gt
+&lth2&gtThis is Heading 2&lt/h2&gt
+&lth3&gtThis is Heading 3&lt/h3&gt
+&lth4&gtThis is Heading 4&lt/h4&gt
+&lth5&gtThis is Heading 5&lt/h5&gt
+&lth6&gtThis is Heading 6&lt/h6&gt</code>
+</pre>
+                    <button title="Copy Code!" onclick="copyCode()" class="copy-btn"><img src="./assets/copy.svg" alt="Copy icon"></button>
+                </div>
+                <div class="output">
+                    <p>Here is the default output without styling:</p>
+                    <h1>This is Heading 1</h1>
+                    <h2>This is Heading 2</h2>
+                    <h3>This is Heading 3</h3>
+                    <h4>This is Heading 4</h4>
+                    <h5>This is Heading 5</h5>
+                    <h6>This is Heading 6</h6>
+                </div>
+            </div>
+        </section>
+        <section class="html-3" id="html">
+            <div class="html">
+                <div class="html-text">
+                    <h3>3. Paragraph Tags</h3>
+                    <p>The paragraph tag is used to display paragraphs on a webpage. Here is an example code:</p>
+                </div>
+                <div class="html-code-container code-wrapper">
+                    <pre id="code-block">
+<code class=" language-html">&ltp&gtThis is an example paragraph.&lt/p&gt</code>
+</pre>
+                    <button title="Copy Code!" onclick="copyCode()" class="copy-btn"><img src="./assets/copy.svg" alt="Copy icon"></button>
+                </div>
+                <div class="output">
+                    <p>Here is the default output without styling:</p>
+                    <pre>This is an example paragraph.</pre>
+                </div>
+            </div>
+        </section>
+        <section class="html-4" id="html">
+            <div class="html">
+                <div class="html-text">
+                    <h3>4. Anchor Tags</h3>
+                    <p>The anchor tag is used to display links on a webpage. It has an attribute href which is the link that we want to redirect the user. Here is an example code:</p>
+                </div>
+                <div class="html-code-container  code-wrapper">
+                    <pre id="code-block">
+<code class=" language-html">&lta href="https://google.com&gtVisit Google&lt/a&gt</code>
+</pre>
+                    <button title="Copy Code!" onclick="copyCode()" class="copy-btn"><img src="./assets/copy.svg" alt="Copy icon"></button>
+                </div>
+                <div class="output">
+                    <p>Here is the default output without styling:</p>
+                    <a href="https://google.com">Visit Google</a>
+                </div>
+            </div>
+        </section>
+        <section class="css-1" id="css">
+            <div class="css">
+                <div class="css-text">
+                    <h2>Lets Talk about <span>CSS!</span></h2>
+                    <p>CSS stands for Cascading Style Sheet. It is used to style webpages, like the paint of a car. We can apply styling with three ways.</p>
+                    <ol>
+                        <li>Inline CSS</li>
+                        <li>Internal CSS</li>
+                        <li>External CSS</li>
+                    </ol>
+                    <h3 >1. Internal CSS</h3>
+                    <p>It is wrriten inside HTML tags. It has the highest priority between all ways of writing CSS meaning it will be applied even when an external stylesheet is connected. Here is an example Code:</p>
+                </div>
+                <div class="css-code-container code-wrapper ">
+                    <pre id="code-block">
+<code class=" language-html">&ltp style="color: red";&gtThis is a red paragraph.&lt/a&gt</code>
+</pre>
+                    <button title="Copy Code!" onclick="copyCode()" class="copy-btn"><img src="./assets/copy.svg" alt="Copy icon"></button>
+                </div>
+                <div class="output">
+                    <p>Here is the default output without styling:</p>
+                    <p style="color: red;">This is a red paragraph.</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="script.js"></script>
+</body>
+</html>
