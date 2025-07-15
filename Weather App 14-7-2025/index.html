@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.webp">
+
+    <link rel="stylesheet" href="styles.css">\<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <span>Weather App</span>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">How I made this</a></li>
+                <li><a href="https://hashirsport.netlify.app" target="_blank">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero" id="hero">
+            <div class="container">
+                <h1>See Today's Weather</h1>
+                <div class="input-con">
+                    <input type="text" name="city" id="city" class="city" placeholder="Enter City name...">
+                    <!-- <input type="button" onclick="click()"> -->
+                    <button class="search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/></svg></button>
+                </div>
+                <div class="location">
+                    <h2 class="city-name">Islamabad</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-geo-alt-fill" viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg>
+                </div>
+                <div class="output-con">
+                    <div class="temp-con">
+                        <img src="https://static.vecteezy.com/system/resources/previews/024/825/182/non_2x/3d-weather-icon-day-with-rain-free-png.png" alt="...">
+                        <span class="temp">15°C</span>
+                    </div>
+                    <div class="extra-con">
+                        <div class="humidity-con">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1"><path d="M20 14.571C20 18.753 16.336 22 12 22s-8-3.247-8-7.429C4 12 5.305 9.452 6.716 7.423c1.43-2.055 3.076-3.726 3.962-4.568M20 14.571L10.678 2.855M20 14.571c0-2.571-1.305-5.119-2.716-7.148c-1.43-2.055-3.076-3.726-3.962-4.568a1.913 1.913 0 0 0-2.644 0M20 14.571L10.678 2.855"/><path stroke-linecap="round" d="M12 18a4 4 0 0 1-4-4"/></g></svg>
+                            <div class="text">
+                                <span class="humidity">50%</span>
+                                <p>Humidity</p>
+                            </div>
+                        </div>
+                        <div class="wind-con">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"height="800px" width="800px" version="1.1" id="Capa_1" viewBox="0 0 365.447 365.447" xml:space="preserve"><g><g><path d="M306.069,189.427H7.5c-4.143,0-7.5-3.358-7.5-7.5s3.357-7.5,7.5-7.5h297.119c0.469-0.092,0.954-0.14,1.45-0.14    c24.47,0,44.378-19.908,44.378-44.378S330.539,85.53,306.069,85.53s-44.378,19.908-44.378,44.378c0,4.142-3.357,7.5-7.5,7.5    s-7.5-3.358-7.5-7.5c0-32.741,26.637-59.378,59.378-59.378s59.378,26.637,59.378,59.378c0,32.224-25.801,58.535-57.829,59.358    C307.118,189.372,306.601,189.427,306.069,189.427z"/></g><g><path d="M152.283,137.479H7.5c-4.143,0-7.5-3.358-7.5-7.5s3.357-7.5,7.5-7.5h143.333c0.469-0.092,0.954-0.14,1.45-0.14    c24.47,0,44.378-19.908,44.378-44.378s-19.908-44.378-44.378-44.378c-24.471,0-44.379,19.908-44.379,44.378    c0,4.142-3.357,7.5-7.5,7.5s-7.5-3.358-7.5-7.5c0-32.741,26.638-59.378,59.379-59.378s59.378,26.637,59.378,59.378    c0,32.224-25.801,58.535-57.829,59.358C153.332,137.423,152.814,137.479,152.283,137.479z"/></g><g><path d="M244.186,346.866c-32.741,0-59.379-26.637-59.379-59.378c0-4.142,3.357-7.5,7.5-7.5s7.5,3.358,7.5,7.5    c0,24.47,19.908,44.378,44.379,44.378c24.47,0,44.378-19.908,44.378-44.378s-19.908-44.378-44.378-44.378H7.5    c-4.143,0-7.5-3.358-7.5-7.5s3.357-7.5,7.5-7.5h236.686c32.741,0,59.378,26.637,59.378,59.378S276.927,346.866,244.186,346.866z"/></g></g></svg>
+                            <div class="text">
+                                <span class="wind">5km/h</span>
+                                <p>Wind Speed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="container">
+                <div class="text">
+                    <h2>How I made this Simple but useful <span>Weather App.</span></h2>
+                    <p>I used HTML, CSS, JavaScript, and the OpenWeatherMap API to create this weather app. If you also want to build a project like this, CodeArry has a great tutorial on how to do it. If you want the code of this app, you ca get it on GitHub.</p>
+                    <a href="https://github.com/hashir1313/PixelAdventure-godot-project" target="_blank"><i class="fab fa-github"></i> Code<i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="logos">
+                    <img class="html-logo" src="https://cdn.worldvectorlogo.com/logos/html-1.svg" alt="HTML Logo">
+                    <img class="css-logo" src="https://cdn.worldvectorlogo.com/logos/css-3.svg" alt="CSS Logo">
+                    <img class="js-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo">
+                </div>
+            </div>
+        </section>
+        <section class="about-me">
+            <div class="container">
+                <div class="text">
+                    <h2>Muhammad Hashir</h2>
+                    <span>Web Developer</span>
+                    <p>A 14-year-old passionate about tech and coding. I spend most of my free time learning new programming languages, and exploring new technologies. Obsessed with coding and want to pursue a career in tech. I am currently in 9th grade and enjoying every moment of it</p>
+                    <a href="https://hashirsport.netlify.app" target="_blank">My Portfolio<i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="img-con">
+                    <img src="./assets/image.webp" alt="My Avatar">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --hero-bg: #e3e8f1;
+    --shadow-color: rgb(110, 110, 110);
+}
+
+header{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 65px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    box-shadow: 0px 1px 10px var(--shadow-color);
+    z-index: 10;
+}
+
+header span{
+    display: inline-flex;
+    color: var(--primary-color);
+    font-size: 30px;
+    font-weight: 650;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+
+}
+
+nav ul li a{
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    display: inline-flex;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover, header span:hover{
+    transform: translateY(-5px) scale(1.01);
+    transition: all 0.3s ease-in-out;
+}
+
+section{
+    height: 100vh;
+    padding: 90px;
+    box-sizing: border-box;
+}
+
+.hero{
+    background-color: var(--hero-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background-color: white;
+    /* background: linear-gradient(120deg, #00feba, #5b548a); */
+    width: 30%;
+    height: 70%;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 10px 2px var(--shadow-color);
+    transition: all 0.3s ease-in-out;
+    gap: 20px;
+}
+
+.hero .container:hover{
+    transform: scale(1.01);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero .container h1{
+    display: inline-flex;
+    color: var(--primary-color);
+    font-size: 35px;
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+}
+
+.hero .container h1:hover{
+    transform: translateY(-5px) scale(1.05);
+}
+
+.input-con{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    border-radius: 50px;
+    padding: 1px 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-con input[type=text]{
+    width: 100%;
+    font-size: 15px;
+    border: 0px;
+    background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    transition: all 0.3s ease-in-out;
+}
+
+.input-con input[type=text]{
+    outline-color: transparent;
+    outline-width: 0px;
+}
+
+.input-con input[type=text]::placeholder{
+    color: white;
+}
+
+.input-con:hover{
+    transform: translateY(-5px);
+}
+
+.input-con button{
+    display: inline-flex;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    width: 37px;
+    height: 37px;
+    border: 0px;
+    background-color: transparent;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.input-con button svg{
+    transform: scale(1.4);
+}
+
+.location{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.location h2{
+    display: inline-flex;
+    color: var(--primary-color);
+    font-size: 35px;
+    transition: all 0.3s ease-in-out;
+}
+
+.location:hover{
+    transform: translateY(-5px) scale(1.05);
+}
+
+.location svg{
+    width: 30px;
+    fill: var(--primary-color);
+}
+
+.output-con{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* gap: 50px; */
+}
+
+.temp-con{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.temp-con span{
+    font-size: 35px;
+    font-weight: 550;
+    color: var(--primary-color);
+} 
+
+.output-con .temp-con img{
+    width: 112px;
+}
+
+.extra-con{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.output-con .extra-con .humidity-con svg, .output-con .extra-con .wind-con svg{
+    width: 50px;
+    height: 50px;
+    fill: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    filter: hue-rotate(120deg);
+}
+
+.output-con .extra-con .humidity-con:hover, .output-con .extra-con .wind-con:hover, .temp-con:hover{
+    transform: translateY(-5px) scale(1.01);
+}
+
+.humidity-con, .wind-con{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.humidity-con p, .wind-con p, .humidity-con span, .wind-con span{
+    font-size: 15px;
+    font-weight: 550;
+}
+
+section.about{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+section.about-me{
+    background-color: var(--hero-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.about .container, .about-me .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about .container .text, .about-me .container .text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+.about .container .text h2{
+    display: inline-flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    font-size: 40px;
+    font-weight: 650;
+    color: var(--secondary-color);
+}
+
+.about-me .container .text h2{
+    display: inline-flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+    font-size: 40px;
+    font-weight: 650;
+    color: var(--primary-color);
+}
+
+
+.about-me .container .text h2:hover{
+    transform: translateY(-5px) scale(1.05);
+}
+
+.about .container .text h2 span{
+    color: var(--primary-color);
+}
+
+.about-me .text span{
+    border: 1px solid var(--secondary-color);
+    border-radius: 20px;
+    padding: 5px 20px;
+    background-color: #f0f0f06b;
+    transition: all 0.3s ease-in-out;
+}
+
+.about .container .text p,.about-me .container .text p{
+    color: var(--secondary-color);
+    font-size: 25px;
+    font-weight: 550;
+}
+
+.about a, .about-me a{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    gap: 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.about a:hover, .about-me a:hover, .about-me span:hover{
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0px 5px 10px var(--shadow-color);
+}
+
+.about .logos, .about-me .img-con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+
+.about .logos img{
+    width: 8vw;
+    height: auto;
+}
+
+.about-me .img-con img{
+    display: inline-flex;
+    width: auto;
+    height: 70vh;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.about-me .img-con img:hover{
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 4px 4px 10px var(--shadow-color);
+}
+
+.html-logo{
+    rotate: -25deg;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+}
+
+.html-logo:hover{
+    transform: rotate(25deg) scale(1.1);
+    z-index: 5;
+}
+
+.css-logo{
+    rotate: 25deg;
+    transform: translateY(-30px);
+    transition: all 0.3s ease-in-out;
+}
+
+.css-logo:hover{
+    transform: rotate(-25deg) scale(1.1);
+    z-index: 5;
+}
+
+.js-logo{
+    rotate: -25deg;
+    transform: translateY(-80px);
+    transition: all 0.3s ease-in-out;
+}
+
+.js-logo:hover{
+    transform: rotate(25deg) scale(1.1);
+    z-index: 5;
+}
+
