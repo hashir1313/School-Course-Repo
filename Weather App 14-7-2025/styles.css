@@ -598,8 +598,8 @@ section.about-me{
         font-size: 25px;
      }
     .about-me .container .text span{
-    font-size: 10px;
-    padding: 5px 10px;
+        font-size: 10px;
+        padding: 5px 10px;
     }
     .about .container .text h2 span{
         font-size: 23px;
@@ -640,3 +640,11 @@ section.about-me{
     }
 } 
 
+@media screen and (max-width: 450px){
+    .dropdown-content{
+        width: 150px;
+    }
+    .about-me .container .img-con img{
+        display: none;
+    }
+}
