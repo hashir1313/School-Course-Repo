@@ -48,7 +48,7 @@ nav ul{
 
 }
 
-nav ul li a{
+nav ul li a, nav ul span a{
     color: var(--secondary-color);
     text-decoration: none;
     font-size: 25px;
@@ -60,6 +60,31 @@ nav ul li a{
 nav ul li a:hover, header span:hover{
     transform: translateY(-5px) scale(1.01);
     transition: all 0.3s ease-in-out;
+}
+
+.dropdown{
+    display: none;
+    position: relative;
+}
+
+.dropdown-content{
+    right: 0;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 5px 10px var(--shadow-color);
+    transition: all 0.3s ease-in-out;
+    gap: 10px;
+}
+
+
+.dropdown svg{
+    fill: var(--secondary-color);
+    width: 30px;
 }
 
 section{
@@ -83,8 +108,10 @@ section{
     justify-content: start;
     background-color: white;
     /* background: linear-gradient(120deg, #00feba, #5b548a); */
-    width: 30%;
-    height: 70%;
+    /* width: 30%;
+    height: 70%; */
+    min-width: 30%;
+    /* min-height: 70%; */
     border-radius: 10px;
     padding: 20px;
     box-shadow: 5px 5px 10px 2px var(--shadow-color);
@@ -288,6 +315,10 @@ section.about-me{
     gap: 20px;
 }
 
+.about .container{
+    gap: 80px;
+}
+
 .about .container .text, .about-me .container .text{
     display: flex;
     flex-direction: column;
@@ -416,4 +447,196 @@ section.about-me{
     transform: rotate(25deg) scale(1.1);
     z-index: 5;
 }
+
+@media screen and (max-width: 1184px){
+    header{
+        gap: 10px;
+    }
+    header span{
+        font-size: 25px;
+    }
+    header nav ul li{
+        gap: 10px;
+    }
+    header nav span a{
+        font-size: 18px;
+    }
+    .hero .container{
+        gap: 18px;
+    }
+    .hero .container h1{
+        font-size: 35px;
+    }
+    .hero  .input-con input{
+        font-size: 18px;
+    }
+    .hero .input-con button svg{
+        width: 18px;
+    }
+    .hero .location h2{
+        font-size: 30px;
+    }
+    .hero .location svg{
+        width: 30px;
+    }
+    .about .container{
+        gap: 80px;
+    }
+    .about .container .text{
+        padding: 0 !important;
+    }
+    .about .container .text h2{
+        font-size: 32px;
+    }
+    .about .container .text h2 span{
+        font-size: 32px;
+    }
+    .about .container .text p{
+        font-size: 20px;
+    }
+    .about .container .text a{
+        font-size: 20px;
+        padding: 5px 20px;
+    }
+    .about-me .container{
+        width: 100vw !important;
+        height: auto !important;
+        gap: 20px;
+    }
+    .about-me .text{
+        padding: 0 !important;
+        width: 40%;
+    }
+    .about-me .container .text h2{
+        font-size: 32px;
+    }
+    .about-me .container .text span{
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .about-me .container .text p{
+        font-size: 20px;
+    }
+    .about-me .container .text a{
+        font-size: 20px;
+        padding: 5px 20px;
+    }
+    .about-me .container .img-con img{
+        width: auto;
+        height: 50vh;
+    }
+} 
+
+@media screen and (max-width: 900px){
+    header{
+        gap: 10px;
+    }
+    header span{
+        font-size: 25px;
+    }
+    .dropdown{
+        display: inline-block;
+        cursor: pointer;
+    }
+    .dropdown-content{
+        display: none;
+    }
+    .dropdown:hover{
+        .dropdown-content{
+            display: flex;
+        }
+    }
+    header nav ul li{
+        gap: 10px;
+        display: none;
+    }
+    header nav span a{
+        font-size: 18px;
+    }
+    .hero .container{
+        /* width: 90%;
+        height: 90%; */
+        gap: 10px;
+    }
+    .hero .container h1{
+        font-size: 23px;
+        padding: 0;
+    }
+    .hero  .input-con input{
+        font-size: 12px;
+    }
+    .hero .input-con button svg{
+        width: 12px;
+    }
+    .hero .location h2{
+        font-size: 20px;
+    }
+    .hero .location svg{
+        width: 20px;
+    }
+    section{
+        padding: 10px !important;
+    }
+    .about{
+        padding-top: 0px !important;
+    }
+    .about .container, .about-me .container{
+        /* padding: 20px 50px; */
+        flex-direction: column;
+        gap: 40px;
+        width: 90%;
+        height: 90%;
+    }
+    .about .container .text, .about-me .container .text{
+        width: 75%;
+        gap: 10px;
+    }
+    .about .container .text h2{
+        font-size: 23px;
+    }
+     .about-me .container .text h2{
+        font-size: 25px;
+     }
+    .about-me .container .text span{
+    font-size: 10px;
+    padding: 5px 10px;
+    }
+    .about .container .text h2 span{
+        font-size: 23px;
+    }
+    .about .container .text p{
+        font-size: 15px;
+    }
+    .about-me .container .text p{
+        font-size: 15px;
+    }
+    .about .container .text a{
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+    .about-me .container .text a{
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+    .about .container .logos{
+        flex-direction: row;
+        width: fit-content;
+    }
+    .html-logo{
+        width: 15vw !important;
+        transform: translateY(0px);
+    }
+    .css-logo{
+        width: 15vw !important;
+        transform: translateY(0px);
+    }
+    .js-logo{
+        width: 15vw !important;
+        transform: translateY(0px);
+    }
+    .about-me .container .img-con img{
+        width: auto;
+        height: 50vh;
+    }
+} 
 
