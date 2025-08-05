@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        main{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: aquamarine;
+        }
+        .con{
+            width: 40vw;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: aqua;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px grey;
+            gap: 20px;
+            padding: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+        .quote-con{
+            transition: all 0.3s ease-in-out;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .quote-img{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            border-radius: 10px;
+        }
+        .quote-text{
+            position: absolute;
+            top: 68%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+        .gen-btn{
+            background-color: transparent;
+            color: black;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            font-size: 15px;
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .quote-text:hover{
+            transform: translateY(-5px) translateX(-50%);
+        }
+        .gen-btn:hover, .gen-btn:active{
+            background-color: black;
+            color: white;
+            transform: translateY(-2px) translateX(-50%) scale(1.1);
+        }  
+    </style>
+</head>
+<body>
+    <main>
+        <div class="con">
+            <div class="quote-con">
+                <img src="https://picsum.photos/id/32/400/600" alt="Quote" class="quote-img">
+                <span class="quote-text">Be motivated</span>
+                <button onclick="RandomImage(), RandomText()" class="gen-btn">Generate</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function RandomImage(){
+            const imageElement = document.querySelector('.quote-img')
+            const imageArray = [
+                'https://picsum.photos/id/220/400/600',
+                'https://picsum.photos/id/100/400/600',
+                'https://picsum.photos/id/50/400/600',]
+            const randomIndex = Math.floor(Math.random() * imageArray.length)
+            imageElement.src = imageArray[randomIndex]
+        }
+        function RandomText(){
+            const textElement = document.querySelector('.quote-text')
+            const textArray = [
+                'Be motivated',
+                'Be determined',
+                'Be confident',
+                'Be positive',
+            ]
+            const randomIndex = Math.floor(Math.random() * textArray.length)
+            textElement.textContent = textArray[randomIndex]
+        }
+    </script>
+</body>
+</html>

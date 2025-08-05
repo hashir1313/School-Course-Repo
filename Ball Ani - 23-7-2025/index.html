@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Amimation</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            background-color: rgb(165, 176, 185);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .con{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .ball{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(255, 42, 42);
+            border-radius: 50px;
+            animation: bounce-ani 0.3s cubic-bezier(0.24, 0.61, 0.43, 1) infinite alternate;
+            animation-play-state: paused;
+            border: 1px solid black;
+        }
+        @keyframes bounce-ani {
+            from{
+                transform: translateY(0);
+            }
+            to{
+                transform: translateY(-80px);
+            }
+        }
+        .con button{
+            background-color: rgb(255, 93, 93);
+            border: 1px solid black;
+            border-radius: 50px;
+            padding: 5px 20px;
+            font-size: 18px;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .con button svg{
+            fill: black;
+            width: 25px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="ball"></div>
+        <button onclick="aniStart()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+      <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+    </svg>Start Bouncing</button>
+        <button onclick="aniStop()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16">
+      <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5"/>
+    </svg>Stop Bouncing</button>
+    </div>
+    <script>
+        function aniStart(){
+            document.querySelector(".ball").style.animationPlayState = "running";
+        }
+        function aniStop(){
+            document.querySelector(".ball").style.animationPlayState = "paused";
+        }
+    </script>
+</body>
+</html>

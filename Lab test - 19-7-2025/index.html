@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Task</title>
+    <style>
+        :root{
+            --primary-color: #519872;
+            --secondory-color: #A4B494;
+            --text-color: #BEC5AD;
+            --shadow-color: #727272;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: var(--primary-color);
+        }
+        .main-con{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .box{
+            width: 25%;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: var(--secondory-color);
+            transition: all 0.3s ease-in-out;
+        }
+        .box:hover{
+            transform: translateY(-5px);
+        }
+        .box img{
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .box button{
+            width: 40%;
+            background-color: transparent;
+            padding: 5px 20px;
+            border: 1px solid var(--shadow-color);
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        .box img:hover, .box button:hover{
+            transform: translateY(-2px);
+        }
+        @media screen and (max-width: 786px){
+            body{
+                padding: 50px 0px;
+            }
+            .main-con{
+                width: auto;
+                height: auto;
+                flex-direction: column;
+            }
+            .box{
+                width: 70%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main-con">
+        <div class="box box1">
+            <img src="https://images.unsplash.com/photo-1672917196301-d5cac5c1a757?q=80&w=1031&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img1">
+            <button>Explore</button>
+        </div>
+        <div class="box box2">
+            <img src="https://images.unsplash.com/photo-1626105985445-6430a31f6f96?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img1">
+            <button>Explore</button>
+        </div>
+        <div class="box box3">
+            <img src="https://images.unsplash.com/photo-1616588181775-138dc8ba4197?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="img1">
+            <button>Explore</button>
+        </div>
+    </div>  
+</body>
+</html>
